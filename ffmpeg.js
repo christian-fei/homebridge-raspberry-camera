@@ -59,7 +59,7 @@ function FFMPEG (hap, cameraConfig, log) {
 
   this.uploader = cameraConfig.uploader || false
 
-  var numberOfStreams = ffmpegOpt.maxStreams || 2
+  var numberOfStreams = ffmpegOpt.maxStreams || 8
   var videoResolutions = []
 
   this.maxWidth = ffmpegOpt.maxWidth || 1280
