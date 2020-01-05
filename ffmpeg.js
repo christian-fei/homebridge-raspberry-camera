@@ -153,8 +153,7 @@ FFMPEG.prototype.handleCloseConnection = function (connectionID) {
 }
 
 FFMPEG.prototype.handleSnapshotRequest = function (request, callback) {
-  // const resolution = request.width + 'x' + request.height
-  const resolution = '1280x720'
+  const resolution = request.width + 'x' + request.height
   var imageSource = this.ffmpegImageSource !== undefined ? this.ffmpegImageSource : this.ffmpegSource
   const ffmpeg = spawn(this.videoProcessor, (imageSource + ' -t 1 -s ' + resolution + ' -f image2 -').split(' '), { env: process.env })
   var imageBuffer = Buffer.alloc(0)
