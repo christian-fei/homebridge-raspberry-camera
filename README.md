@@ -14,6 +14,22 @@ forked from [https://github.com/moritzmhmk/homebridge-camera-rpi](moritzmhmk/hom
 
 ### Config.json Example
 
-    {
-      "platform": "raspberry-camera"
-    }
+```json
+{
+  "bridge": {
+      "name": "HomeBridge",
+      "username": "0E:E5:23:4C:B4:31",
+      "port": 51826,
+      "pin": "777-88-999"
+  },
+  "mdns": {
+      "interface": "192.168.1.110"
+  },
+  "accessories": [],
+  "platforms": [
+      {
+          "platform": "raspberry-camera"
+      }
+  ]
+}
+```
