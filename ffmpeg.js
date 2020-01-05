@@ -19,7 +19,7 @@ function FFMPEG (hap, cameraConfig, log) {
     source: '-f v4l2 -r 30 -s 1280x720 -i /dev/video0',
     stillImageSource: '-i file:///home/pi/snapshots/current.png',
     maxBitrate: 1024,
-    maxStreams: 8,
+    maxStreams: 2,
     maxWidth: 1280,
     maxHeight: 720,
     maxFPS: 30,
@@ -59,7 +59,7 @@ function FFMPEG (hap, cameraConfig, log) {
 
   this.uploader = cameraConfig.uploader || false
 
-  var numberOfStreams = ffmpegOpt.maxStreams || 8
+  var numberOfStreams = ffmpegOpt.maxStreams || 2
   var videoResolutions = []
 
   this.maxWidth = ffmpegOpt.maxWidth || 1280
