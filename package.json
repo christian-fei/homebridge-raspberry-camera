@@ -1,6 +1,6 @@
 {
   "name": "homebridge-raspberry-camera",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "raspberry camera plugin for homebridge: https://github.com/nfarina/homebridge",
   "license": "ISC",
   "keywords": [
